@@ -1,0 +1,31 @@
+<div class="container-form">
+    <div class="container-form__header">
+        <p><span>Bank</span> Support Portal</p>
+    </div>
+    <form>
+        <div class="input-block">
+            <div class="form-email input-field">
+                <input placeholder="E-mail" name="email" [(ngModel)]="user.email" #email="ngModel"
+                       required pattern="[a-zA-Z_]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}"/>
+            </div>
+            <div [hidden]="email.valid || email.untouched" class="alert-danger">
+                Invalid Username
+            </div>
+        </div>
+        <div class="input-block">
+            <div class="form-pass input-field">
+                <input placeholder="Password" type="password" name="password" [(ngModel)]="user.password" #password="ngModel"
+                      pattern="[0-9]{5,10}" required/>
+            </div>
+            <div [hidden]="password.valid || password.untouched" class="alert-danger">
+                Invalid Password
+            </div>
+        </div>
+        <div class="btn-field">
+            <button>Login</button>
+        </div>
+        <div class="form-text">
+            <span>Forgot your password? <a href="#">Reset it here.</a></span>
+        </div>
+    </form>
+</div>

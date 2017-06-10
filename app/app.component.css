@@ -1,0 +1,124 @@
+@font-face {
+    font-family: HelveticaNeue; /* Имя шрифта */
+    src: url(../font/HelveticaNeue.ttf); /* Путь к файлу со шрифтом */
+}
+
+.container-form {
+    margin: 0 auto;
+    width: 442px;
+    font-family: HelveticaNeue;
+}
+.container-form__header span {
+    color: #2fa2c3;
+    font-size: 41px;
+    font-weight: 700;
+}
+.container-form__header {
+    margin-bottom: 32px;
+    text-align: center;
+}
+.container-form__header p {
+    color: #666666;
+    font-size: 18px;
+    font-weight: 300;
+}
+form {
+    border-radius: 5px;
+    border: 1px solid rgba(153, 153, 153, 0.33);
+    padding: 40px 72px;
+}
+.input-block {
+    margin-bottom: 40px;
+}
+.input-field {
+    width: 250px;
+    height: 40px;
+}
+input {
+    border-radius: 5px;
+    border: 1px solid rgba(153, 153, 153, 0.28);
+    padding-left: 45px;
+    width: 100%;
+    height: 100%;
+    color: #666666!important;
+    font-size: 14px;
+    position: relative;
+    display: block;
+}
+.form-email, .form-pass {
+    position: relative;
+}
+
+.form-email::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 17px;
+    background: url("../img/mail.png");
+    width: 14px;
+    height: 13px;
+}
+.form-pass::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 17px;
+    background: url("../img/lock.png") no-repeat;
+    width: 14px;
+    height: 13px;
+}
+.ng-touched.ng-invalid .form-email:before, .ng-touched.ng-valid .form-pass:before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -65px;
+    background: url(../img/mistake.png) no-repeat;
+    width: 14px;
+    height: 13px;
+}
+.ng-touched.ng-valid .form-email:before, .ng-touched.ng-valid .form-pass:before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -65px;
+    background: url(../img/ok.png) no-repeat;
+    width: 14px;
+    height: 13px;
+}
+input.ng-valid:focus {
+    border: 1px solid green;
+}
+.alert-danger {
+    color: #ed1f24;
+    font-size: 11px;
+    font-weight: 400;
+    margin-top: 6px;
+}
+.btn-field {
+    width: 92px;
+    height: 40px;
+}
+
+.btn-field button {
+    width: 100%;
+    height: 100%;
+    background-color: #36a2c1;
+    color: #ffffff;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+}
+
+.form-text {
+    font-size: 12px;
+    color: #666666;
+    margin-top: 16px;
+}
+.form-text a {
+    text-decoration: none;
+    color: #36a2c1;
+}
